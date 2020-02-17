@@ -75,6 +75,10 @@ h1 {
   padding-top: 30px;
 }
 
+iframe {
+  border: 0; 
+}
+
 .video h1 {
     padding-bottom: 30px;
 }
