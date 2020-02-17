@@ -76,7 +76,7 @@ h1 {
 }
 
 iframe {
-  border: 0; 
+  border: 0;
 }
 
 .video h1 {
@@ -166,7 +166,7 @@ p {
   padding-top: 30px;
 }
 
-.form-area h1 {
+.form-area h3 {
   padding-bottom: 20px;
   font-size: 2rem;
 }
