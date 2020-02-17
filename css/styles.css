@@ -198,8 +198,12 @@ p {
   background-color: #333333;
 }
 
-footer {
+.footer {
   font-family: 'Open Sans', sans-serif;
   padding-bottom: 20px;
   padding-left: 20px;
+}
+
+.footer a {
+text-decoration: none;
 }
