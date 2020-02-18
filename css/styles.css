@@ -1,16 +1,23 @@
-html {
-  font-size: 16px;
-}
+html {font-size: 16px;}
 
 .full-background {
-  width: 100%;
-  height: 100%;
   background: url("https://res.cloudinary.com/dqmikq5nd/image/upload/v1581867103/fcc-product-improved/furniture2_jujebg.png") no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
   overflow: hidden;
+  display: block;
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.header-img {
+  display: block;
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 * {
@@ -36,7 +43,7 @@ html {
 /* Style the links inside the navigation bar */
 .topnav a {
   float: left;
-  color: #E6CCFF;
+  color: #e6ccff;
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
@@ -51,9 +58,7 @@ html {
 }
 
 /* Right-aligned section inside the top navigation */
-.topnav-right {
-  float: right;
-}
+.topnav-right {float: right;}
 
 @media only screen and (max-width: 600px) {
   nav {
@@ -79,8 +84,13 @@ iframe {
   border: 0;
 }
 
-.video h1 {
-    padding-bottom: 30px;
+.video h1 {padding-bottom: 30px;}
+
+/* If the screen size is 600px wide or less, hide the element */
+@media screen and (max-width: 600px) {
+  .video-area {
+    display: none;
+  }
 }
 
 .products-area {
@@ -90,7 +100,7 @@ iframe {
   justify-content: center;
   box-shadow: 5px 10px #aab2bd;
   background-color: #262626;
-  color: #E6CCFF;
+  color: #e6ccff;
 }
 
 .product-card h2 {
@@ -102,7 +112,7 @@ iframe {
 
 .product-card a {
   text-decoration: none;
-  color: #E6CCFF;
+  color: #e6ccff;
 }
 
 /* Change the color of links on hover */
@@ -118,7 +128,7 @@ iframe {
   justify-content: center;
   box-shadow: 3px 7px #aab2bd;
   background-color: #262626;
-  color: #E6CCFF;
+  color: #e6ccff;
   overflow: hidden;
 }
 
@@ -129,15 +139,27 @@ iframe {
   justify-content: center;
   box-shadow: 3px 7px #aab2bd;
   background-color: #262626;
-  color: #E6CCFF;
+  color: #e6ccff;
 }
 
 .product-container {
   height: 400px;
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
   justify-content: space-around;
   padding-top: 30px;
+}
+
+/* If the screen width is less than 992px show the flexbox as columns */
+@media screen and (max-width: 992px) {
+  .product-container {
+  height: 1400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
 }
 
 ul {
@@ -146,10 +168,10 @@ ul {
   font-size: .9rem;
   line-height: 40px;
   text-align: left;
-  color: #E6CCFF;
+  color: #e6ccff;
 }
 
-p {
+.product-card p {
   text-align: center;
   font-size: .9rem;
   font-family: 'Open Sans', sans-serif;
@@ -157,6 +179,7 @@ p {
 }
 
 .form-area {
+  max-width: 100%;
   height: 500px;
   display: flex;
   justify-content: center;
@@ -208,6 +231,6 @@ p {
   padding-left: 20px;
 }
 
-.footer a {
-text-decoration: none;
-}
+.footer a {text-decoration: none;}
+
+.footer p {font-family: inherit;}
